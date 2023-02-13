@@ -49,14 +49,17 @@ struct results
 //      os << r.states->size().template convert_to<long double>() << " state(s)\n";
 //    MCC now requires exact state count
       os << r.states->size() << " state(s)\n";
+      os << "STATE_SPACE STATES "<< r.states->size() <<  " TECHNIQUES DECISION_DIAGRAMS" << std::endl;
     }
     if (r.max_token_markings)
     {
       os << "maximal number of tokens per marking : " << *r.max_token_markings << '\n';
+      os << "STATE_SPACE MAX_TOKEN_PER_MARKING " << *r.max_token_markings <<  " TECHNIQUES DECISION_DIAGRAMS" << std::endl;
     }
     if (r.max_token_places)
     {
       os << "maximal number of tokens in a place : " << *r.max_token_places << '\n';
+      os << "STATE_SPACE MAX_TOKEN_IN_PLACE " << *r.max_token_places <<  " TECHNIQUES DECISION_DIAGRAMS" << std::endl;
     }
     if (r.dead_transitions)
     {
